@@ -35,6 +35,14 @@
     die();
   }
 
+  // encoding bullshit 
+  $encoding = mb_detect_encoding($jsonStr);
+  echo "encoding = $encoding" . PHP_EOL;
+
+  if(!mb_check_encoding($jsonStr, 'UTF-8')) {
+    $jsonStr = mb_convert_encoding($jsonStr, 'UTF-8', $encoding);
+  }
+
   // decode json
   $words = json_decode($jsonStr, true);
   if(json_last_error() !== JSON_ERROR_NONE) {
