@@ -1,0 +1,15 @@
+expects a dictionary of words in
+words.json
+
+TO RUN :
+go to the directory you put the vocab.php file in
+use cd to navigate folders
+you'll probably need to do this 
+cd Desktop
+cd vocab
+
+to get there, once in the folder
+run from command prompt with
+php vocab.php
+
+quit program with control + c
